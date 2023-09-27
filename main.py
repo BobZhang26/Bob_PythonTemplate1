@@ -1,8 +1,8 @@
 """
 Main cli or app entry point
 """
+def add(x,y):
+  return x + y
 
-
-# if __name__ == "__main__":
-# pylint: disable=no-value-for-parameter
-#     add_cli()
+if __name__ == "__main__":
+  add(1,1)
