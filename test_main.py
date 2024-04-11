@@ -1,7 +1,7 @@
 """
 Test goes here
 """
-from main import add
+from mylib import *
 
 def test_func():
     return add(1,1)
