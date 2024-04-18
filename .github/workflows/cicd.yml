@@ -28,9 +28,9 @@ jobs:
       - name: test with pytest
         run: |
           make test
-      - name: format
+      - name: format with black 
         run: |
           make format
-      - name: deploy
+      - name: deploy the app
         run: |
           make deploy
