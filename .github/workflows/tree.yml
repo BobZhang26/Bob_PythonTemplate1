@@ -1,0 +1,29 @@
+name: Generate Tree Diagram
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Install tree
+      run: sudo apt-get install tree
+
+    - name: Generate tree structure
+      run: tree -L 2 > tree_structure.txt
+
+    - name: Commit tree structure
+      run: |
+        git config --global user.email "zz347@duke.edu"
+        git config --global user.name "GitHub Actions"
+        git add tree_structure.txt
+        git commit -m "Update tree structure"
+        git push
