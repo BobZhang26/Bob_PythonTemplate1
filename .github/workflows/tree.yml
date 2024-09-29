@@ -26,4 +26,4 @@ jobs:
         git config --global user.name "GitHub Actions"
         git add tree_structure.txt
         git commit -m "Update tree structure"
-        git push
+        git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/BobZhang26/Bob_PythonTemplate1.git
